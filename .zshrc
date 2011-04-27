@@ -13,7 +13,7 @@ PROMPT="%{${fg[blue]}%}%/%(!.#.$) %{${reset_color}%}"
 #PROMPT="%/%% "
 #PROMPT="(*'-')"
 
-HISTFILE=~/Dropbox/Public/dotfiles/.zsh_history
+HISTFILE=.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
@@ -24,10 +24,16 @@ setopt list_packed
 
 setopt nobeep
 
+#macbook
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:/usr/local/git
 export PATH=$PATH:/Applications/android-sdk-mac_86/tools
 export PYTHONPATH=/opt/local/lib/python2.5/site-packages
+
+#sakura
+export PATH=$PATH:$HOME/local/bin
+export PATH=$PATH:$HOME/local/git/bin
+export MAILCHECK=0
 
 alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
 
