@@ -33,6 +33,7 @@ export PYTHONPATH=/opt/local/lib/python2.5/site-packages
 #sakura
 export PATH=$PATH:$HOME/local/bin
 export PATH=$PATH:$HOME/local/git/bin
+export PATH=$PATH:$HOME/local/screen/bin
 export MAILCHECK=0
 
 alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
