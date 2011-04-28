@@ -36,6 +36,7 @@ export PATH=$PATH:$HOME/local/git/bin
 export MAILCHECK=0
 
 alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
+alias hi="history -n 0 | grep"
 
 function title {
     print -n "\e]0;$@\a"
@@ -46,4 +47,3 @@ chpwd(){
     title $(basename "$(pwd)")
 }
 
-alias hi="history -n 0 | grep"
