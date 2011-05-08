@@ -1,4 +1,5 @@
 export LANG=ja_JP.UTF-8
+export LANG=UTF-8
 
 autoload predict-on;predict-on
 autoload -U compinit;compinit
@@ -13,7 +14,7 @@ PROMPT="%{${fg[blue]}%}%/%(!.#.$) %{${reset_color}%}"
 #PROMPT="%/%% "
 #PROMPT="(*'-')"
 
-HISTFILE=.zsh_history
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt extended_history
@@ -33,10 +34,12 @@ export PYTHONPATH=/opt/local/lib/python2.5/site-packages
 #sakura
 export PATH=$PATH:$HOME/local/bin
 export PATH=$PATH:$HOME/local/git/bin
+export PATH=$PATH:$HOME/local/screen/bin
 export MAILCHECK=0
 
 alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
 alias hi="history -n 0 | grep"
+alias ls='ls -G'
 
 function title {
     print -n "\e]0;$@\a"
