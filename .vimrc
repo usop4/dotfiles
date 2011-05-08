@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'ZenCoding.vim'
 Bundle 'QuickRun.vim'
 Bundle 'ref.vim'
+Bundle 'fugitive.vim'
 
 filetype plugin indent on "vundle required
 
