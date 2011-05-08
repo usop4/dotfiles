@@ -20,10 +20,11 @@ SAVEHIST=10000
 setopt extended_history
 setopt histignorealldups
 setopt share_history
-
 setopt list_packed
-
 setopt nobeep
+
+alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
+alias hi="history -n 0 | grep"
 
 #macbook
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
@@ -37,16 +38,4 @@ export PATH=$PATH:$HOME/local/git/bin
 export PATH=$PATH:$HOME/local/screen/bin
 export MAILCHECK=0
 
-alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
-alias hi="history -n 0 | grep"
-alias ls='ls -G'
-
-function title {
-    print -n "\e]0;$@\a"
-    export TITLE="${(pj: :)@}"
-}
-
-chpwd(){
-    title $(basename "$(pwd)")
-}
 
