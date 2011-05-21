@@ -36,6 +36,9 @@ export PYTHONPATH=/opt/local/lib/python2.5/site-packages
 export PATH=$PATH:$HOME/local/bin
 export PATH=$PATH:$HOME/local/git/bin
 export PATH=$PATH:$HOME/local/screen/bin
+export GEM_HOME=$HOME/local/gems/1.8
+export RUBYLIB=$RUBYLIB:$GEM_HOME/lib
+export PATH=$PATH:$GEM_HOME/bin
 export MAILCHECK=0
 
 
