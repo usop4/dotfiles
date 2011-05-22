@@ -8,6 +8,8 @@ Bundle 'ZenCoding.vim'
 Bundle 'QuickRun.vim'
 Bundle 'ref.vim'
 Bundle 'fugitive.vim'
+Bundle 'neocomplcache'
+let g:neocomplcache_enable_at_startup = 1
 
 filetype plugin indent on "vundle required
 
@@ -38,6 +40,9 @@ set wildmode=list:longest
 
 set backspace=indent,eol,start
 
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /s+$/
+
 function! RTrim()
 let s:cursor = getpos(".")
 %s/\s\+$//e
@@ -48,5 +53,5 @@ autocmd BufWritePre * call RTrim()
 
 au BufNewFile,BufRead *.pde setf arduino
 
-"nnoremap <Space> <PageDown>zz
-"nnoremap <S-Space> <PageUp>zz
+nnoremap <Space> <PageDown>zz
+nnoremap <S-Space> <PageUp>zz
