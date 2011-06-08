@@ -10,10 +10,6 @@ setopt pushd_ignore_dups
 
 autoload colors;colors
 
-PROMPT="%{${fg[blue]}%}%/%(!.#.$) %{${reset_color}%}"
-#PROMPT="%/%% "
-#PROMPT="(*'-')"
-
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -36,6 +32,24 @@ export PYTHONPATH=/opt/local/lib/python2.5/site-packages
 export PATH=$PATH:$HOME/local/bin
 export PATH=$PATH:$HOME/local/git/bin
 export PATH=$PATH:$HOME/local/screen/bin
+GEM_HOME=~/.gem/ruby/1.8
+GEM_DEFAULT_BIN=$GEM_HOME/bin
+PATH=$GEM_DEFAULT_BIN:$PATH
+export GEM_HOME GEM_DEFAULT_BIN PATH
+
 export MAILCHECK=0
+
+# VCS settings
+autoload -Uz vcs_info
+precmd() {
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  psvar[1]=$vcs_info_msg_0_
+}
+PROMPT=$'%3F%~%f%1v '
+#PROMPT=$'%2F%n@%m%f %3F%~%f%1v '
+#PROMPT="%{${fg[blue]}%}%/%(!.#.$) %{${reset_color}%}"
+#PROMPT="%/%% "
+#PROMPT="(*'-')"
 
 
