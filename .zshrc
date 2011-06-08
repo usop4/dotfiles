@@ -24,7 +24,7 @@ setopt list_packed
 setopt nobeep
 
 alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
-alias hi="history -n 0 | grep"
+alias hi="history -i -n 0 | grep"
 alias ls='ls -G'
 #macbook
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
