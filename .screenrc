@@ -1,0 +1,6 @@
+escape ^z^z
+term xterm-color
+vbell off
+startup_message off
+autodetach on
+
