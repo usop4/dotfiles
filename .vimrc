@@ -40,18 +40,16 @@ set wildmode=list:longest
 
 set backspace=indent,eol,start
 
+nnoremap <Space> <PageDown>zz
+nnoremap <S-Space> <PageUp>zz
+
+" show whitespace
+" http://d.hatena.ne.jp/kasahi/20070902/1188744907
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /s+$/
 
-function! RTrim()
-let s:cursor = getpos(".")
-%s/\s\+$//e
-call setpos(".",s:cursor)
-endfunction
+" show git branch on status line
+" http://d.hatena.ne.jp/ruedap/20110712
+set laststatus=2
+set statusline=%<[%n]%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%y\ %F%=%{fugitive#statusline()}%l,%c%V%8P
 
-autocmd BufWritePre * call RTrim()
-
-au BufNewFile,BufRead *.pde setf arduino
-
-nnoremap <Space> <PageDown>zz
-nnoremap <S-Space> <PageUp>zz
