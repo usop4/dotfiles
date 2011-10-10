@@ -1,6 +1,8 @@
 set nocompatible
 filetype off        "vundle required
 
+set encoding=utf-8
+
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
@@ -35,6 +37,7 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
+
 set wildmenu
 set wildmode=list:longest
 
@@ -42,6 +45,12 @@ set backspace=indent,eol,start
 
 nnoremap <Space> <PageDown>zz
 nnoremap <S-Space> <PageUp>zz
+
+" 
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=1
+highlight PmenuSbar ctermbg=4
+
 
 " show whitespace
 " http://d.hatena.ne.jp/kasahi/20070902/1188744907

@@ -22,6 +22,7 @@ setopt nobeep
 alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
 alias hi="history -i -n 0 | grep"
 alias ls='ls -G'
+
 #macbook
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:/usr/local/git
@@ -32,7 +33,11 @@ export PYTHONPATH=/opt/local/lib/python2.5/site-packages
 export PATH=$PATH:$HOME/local/bin
 export PATH=$PATH:$HOME/local/git/bin
 export PATH=$PATH:$HOME/local/screen/bin
-GEM_HOME=~/.gem/ruby/1.8
+
+export PATH=$PATH:$HOME/bin
+
+RUBYLIB=$HOME/lib
+GEM_HOME=$HOME/.gem/ruby/1.8
 GEM_DEFAULT_BIN=$GEM_HOME/bin
 PATH=$GEM_DEFAULT_BIN:$PATH
 export GEM_HOME GEM_DEFAULT_BIN PATH
