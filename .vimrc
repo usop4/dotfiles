@@ -6,6 +6,7 @@ set encoding=utf-8
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
+Bundle 'ack.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'QuickRun.vim'
 Bundle 'ref.vim'

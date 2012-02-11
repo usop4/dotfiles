@@ -3,4 +3,5 @@ term xterm-color
 vbell off
 startup_message off
 autodetach on
+logfile "~/screen/log/%H.%Y.%m%d-%c:%s.%n.%t.log"
 
